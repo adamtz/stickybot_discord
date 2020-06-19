@@ -112,9 +112,9 @@ async def loop_otc(ctx, channel):
 @bot.command(name='draft', help='Find Draft Info')
 def draft_discord(ctx):
 	leagueId = parseChannel(ctx.message.channel.name)
-	response = await draft(leagueId)
+	response = draft(leagueId)
 	print (response)
-	await ctx.send(response)
+	ctx.send(response)
 
 @bot.command(name='bylaws', help='Find Bylaw Info')
 async def bylaws_discord(ctx):
